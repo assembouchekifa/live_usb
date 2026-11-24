@@ -24,4 +24,5 @@ file_permissions=(
   ["/usr/local/bin/livecd-sound"]="0:0:755"
   ["/home/assem"]="1000:1000:755"
   ["/etc/sudoers.d/assem"]="0:0:440"
+  ["/home/assem/.zprofile"]="1000:1000:644"
 )
