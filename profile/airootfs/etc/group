@@ -1,3 +1,17 @@
 root:x:0:root
 assem:x:1000:
 wheel:x:998:assem
+audio:x:995:assem
+input:x:992:assem
+render:x:987:assem
+storage:x:985:assem
+video:x:983:assem
+power:x:98:assem
+optical:x:988:assem
+floppy:x:94:assem
+scanner:x:96:assem
+kvm:x:990:assem
+lp:x:989:assem
+disk:x:993:assem
+network:x:90:assem
+users:x:982:assem

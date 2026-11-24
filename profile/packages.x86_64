@@ -118,6 +118,12 @@ sway
 waybar
 kitty
 swaybg
+mesa
+vulkan-icd-loader
+vulkan-swrast
+vulkan-intel
+vulkan-radeon
+vulkan-nouveau
 wl-clipboard
 grim
 slurp

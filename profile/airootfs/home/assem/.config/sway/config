@@ -1,0 +1,19 @@
+# Sway — Live USB
+set $mod Mod4
+set $term kitty
+
+font pango:JetBrainsMono Nerd Font 10
+
+# Minimal desktop: status bar and solid-color background
+exec waybar
+exec swaybg -c '#1e1e2e'
+
+# Open terminal
+bindsym $mod+Return exec $term
+
+# Close focused window
+bindsym $mod+w kill
+
+# Reload / exit (kept as safety since this replaces the default config)
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exit

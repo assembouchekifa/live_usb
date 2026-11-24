@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Start Sway with a renderer fallback chain.
+#
+# 1. Default renderer: GLES2 (Mesa) -> Vulkan. With the Vulkan ICDs in this
+#    image, this covers AMD, Intel, NVIDIA (nouveau) and most VMs.
+# 2. CPU-only pixman renderer: last resort when EGL/Vulkan are unusable.
+#    It is slower but does not need a working GPU driver.
+
+set -u
+
+# Permit Mesa/lavapipe software rendering when no GPU is available. This does
+# not force software: hardware rendering is still preferred when present.
+export WLR_RENDERER_ALLOW_SOFTWARE=1
+
+sway "$@" && exit 0
+
+export WLR_RENDERER=pixman
+export LIBGL_ALWAYS_SOFTWARE=1
+exec sway "$@"
